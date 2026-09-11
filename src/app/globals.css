@@ -2,25 +2,47 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #004899;
+  --apl-navy: #004899;
+  --apl-blue: #004899;
+  --apl-yellow: #fbc02d;
+  --apl-red: #e53935;
+  --apl-green: #43a047;
+  --apl-cyan: #00bcd4;
+  --apl-footer-purple: #3d2590;
+  --apl-hero-bg: #004899;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-apl-navy: var(--apl-navy);
+  --color-apl-blue: var(--apl-blue);
+  --color-apl-yellow: var(--apl-yellow);
+  --color-apl-red: var(--apl-red);
+  --color-apl-green: var(--apl-green);
+  --color-apl-cyan: var(--apl-cyan);
+  --color-apl-footer: var(--apl-footer-purple);
+  --font-sans: var(--font-lexend), Verdana, system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
 }
+
+/* Custom warm card gradient helper */
+.bg-warm-card-gradient {
+  background: linear-gradient(135deg, #e77e46 0%, #c43f6e 100%);
+}
+
+.bg-intro-pill-gradient {
+  background: linear-gradient(90deg, #e77e46 0%, #c43f6e 100%);
+}
+
