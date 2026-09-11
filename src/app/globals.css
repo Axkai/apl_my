@@ -4,25 +4,31 @@
   --background: #ffffff;
   --foreground: #004899;
   --apl-navy: #004899;
-  --apl-blue: #004899;
+  --apl-purple: #482ea4;
+  --apl-purple-dark: #362186;
   --apl-yellow: #fbc02d;
   --apl-red: #e53935;
   --apl-green: #43a047;
   --apl-cyan: #00bcd4;
-  --apl-footer-purple: #3d2590;
-  --apl-hero-bg: #004899;
+  --apl-orange: #e77e46;
+  --apl-pink: #c43f6e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-apl-navy: var(--apl-navy);
-  --color-apl-blue: var(--apl-blue);
+  --color-apl-purple: var(--apl-purple);
+  --color-apl-purple-dark: var(--apl-purple-dark);
   --color-apl-yellow: var(--apl-yellow);
   --color-apl-red: var(--apl-red);
   --color-apl-green: var(--apl-green);
   --color-apl-cyan: var(--apl-cyan);
-  --color-apl-footer: var(--apl-footer-purple);
+  --color-apl-orange: var(--apl-orange);
+  --color-apl-pink: var(--apl-pink);
+  
+  --font-heading: var(--font-lexend), system-ui, -apple-system, sans-serif;
+  --font-body: Verdana, Geneva, Tahoma, sans-serif;
   --font-sans: var(--font-lexend), Verdana, system-ui, -apple-system, sans-serif;
 }
 
@@ -33,16 +39,24 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   overflow-x: hidden;
 }
 
-/* Custom warm card gradient helper */
+/* Default Typography Mapping */
+h1, h2, h3, h4, h5, h6, nav {
+  font-family: var(--font-heading);
+}
+
+p, span, li, button, input {
+  font-family: var(--font-body);
+}
+
+/* Custom Design System Gradients */
 .bg-warm-card-gradient {
   background: linear-gradient(135deg, #e77e46 0%, #c43f6e 100%);
 }
 
 .bg-intro-pill-gradient {
-  background: linear-gradient(90deg, #e77e46 0%, #c43f6e 100%);
+  background: linear-gradient(90deg, #c43f6e 0%, #e77e46 100%);
 }
-

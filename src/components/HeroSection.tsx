@@ -1,15 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import { Sparkles, BookOpen, GraduationCap } from "lucide-react";
+import { Sparkles, GraduationCap } from "lucide-react";
+import Container from "./ui/Container";
+import SectionHeader from "./ui/SectionHeader";
 
 export default function HeroSection() {
   return (
     <section className="w-full bg-white pt-20 pb-20 lg:pt-28 lg:pb-32 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Context & Typography */}
           <div className="lg:col-span-6 flex flex-col items-start space-y-10">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-[#004899] leading-[1.1] tracking-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-[#004899] leading-[1.1] tracking-tight font-['Lexend',sans-serif]">
               AllPlay Learn <br />
               Malaysia
             </h1>
@@ -21,7 +23,7 @@ export default function HeroSection() {
               resources to support educators, parents and children to recognise
               strengths and support needs to help all children, including those
               with special needs, participate, learn and feel included at
-              school,.
+              school.
             </p>
 
             {/* Monash University Partner Logo */}
@@ -86,17 +88,18 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Sub-Banner Intro Section */}
-        <div className="mt-20 lg:mt-28 text-center max-w-5xl max-w-[1024px] mx-auto space-y-4 px-4">
-          <div className="inline-block">
-            <div className="h-2 w-12 rounded-full bg-gradient-to-r from-[#C43F6E] to-[#E77E46] mx-auto mb-4"></div>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#004899] tracking-tight leading-snug">
-            Resources and information for children, parents, and <br className="hidden md:inline" />
-            teachers in Malaysian primary schools
-          </h2>
+        {/* Sub-Banner Intro Section (Using Modular SectionHeader) */}
+        <div className="mt-20 lg:mt-28">
+          <SectionHeader
+            title={
+              <>
+                Resources and information for children, parents, and <br className="hidden md:inline" />
+                teachers in Malaysian primary schools
+              </>
+            }
+          />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
