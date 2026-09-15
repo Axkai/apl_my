@@ -5,32 +5,35 @@ import AudienceCard, { AudienceCardProps } from "./ui/AudienceCard";
 export default function AudienceCards() {
   const cards: AudienceCardProps[] = [
     {
-      id: "students",
+      id: "students-1",
       title: "Students",
-      copy: "Resources and information to support students with disabilities and developmental challenges in primary school.",
-      cta: "Find out more",
+      copy: "Resources and information to support students with special needs at primary school.",
+      cta: "Find out More",
       href: "/students",
+      bgImage: "/card-students-bg.png",
     },
     {
-      id: "parents",
+      id: "parents-1",
       title: "Parents",
-      copy: "Resources and information for parents, caregivers and guardians of children with disabilities and developmental challenges in the primary school years.",
-      cta: "Find out more",
+      copy: "Resources and information for parents and caregivers of primary-school aged children with special needs to use at home to support engagement at school.",
+      cta: "Find out More",
       href: "/parents",
+      bgImage: "/card-parents-bg.png",
     },
     {
-      id: "teachers",
+      id: "teachers-1",
       title: "Teachers",
-      copy: "Resources, information and strengths- and evidence-based strategies for primary school teachers and education support staff that aim to help create inclusive education environments for children with disabilities and developmental challenges.",
-      cta: "Find out more",
+      copy: "Resources, information and evidence-based strategies for primary school teachers and education support staff that help create inclusive education environments for children with special needs.",
+      cta: "Find out More",
       href: "/teachers",
+      bgImage: "/card-teachers-bg.png",
     },
   ];
 
   return (
-    <section className="w-full bg-white py-16 lg:py-24">
+    <section className="w-full bg-white py-12 lg:py-[82px]">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 justify-items-center">
           {cards.map((card) => (
             <AudienceCard key={card.id} {...card} />
           ))}

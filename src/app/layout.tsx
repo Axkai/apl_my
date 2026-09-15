@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import { Lexend, Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const lexend = Lexend({
   variable: "--font-lexend",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lexend.variable} h-full antialiased`}>
+    <html lang="en" className={`${lexend.variable} ${openSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );

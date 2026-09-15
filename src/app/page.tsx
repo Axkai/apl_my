@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white font-sans">
       <Header />
-      <main className="flex-1">
+      <main className="w-full flex flex-col gap-[10px] flex-1">
         <HeroSection />
         <AudienceCards />
       </main>

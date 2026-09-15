@@ -5,7 +5,7 @@ interface ButtonProps {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
-  variant?: "outline-white" | "primary-navy" | "solid-white" | "ghost-cyan";
+  variant?: "outline-white" | "outline-navy" | "primary-navy" | "solid-white" | "ghost-cyan";
   size?: "sm" | "md" | "lg";
   className?: string;
   target?: string;
@@ -35,7 +35,9 @@ export default function Button({
 
   const variantStyles = {
     "outline-white":
-      "border-2 border-white bg-white/20 backdrop-blur-md text-white hover:bg-white hover:text-[#C43F6E] shadow-xs",
+      "border-2 border-white bg-white/5 rounded-[3px] text-white hover:bg-white hover:text-[#C43F6E] transition-colors",
+    "outline-navy":
+      "border-2 border-[#004899] text-[#004899] bg-white hover:bg-[#004899] hover:text-white shadow-xs",
     "primary-navy":
       "bg-[#004899] text-white hover:bg-[#003366] shadow-sm",
     "solid-white":
