@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import GuideHero from "@/components/getting-started/GuideHero";
 import InclusionDiagramSection from "@/components/getting-started/InclusionDiagramSection";
 import InclusiveStepsSection from "@/components/getting-started/InclusiveStepsSection";
-import ResourcePromoGrid from "@/components/getting-started/ResourcePromoGrid";
 
 export const metadata: Metadata = {
   title: "Getting Started - Teacher Guide | AllPlay Learn Malaysia",
@@ -17,11 +16,11 @@ export default function GettingStartedPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white font-sans">
       <Header />
-      <main className="flex-1">
+      {/* Main Body Container (Figma spec: 1440 Fill x 3356 Hug, Vertical Flow, Gap 0, Pb: 100px) */}
+      <main className="w-full max-w-[1440px] mx-auto flex flex-col gap-0 pb-[100px] flex-1">
         <GuideHero />
         <InclusionDiagramSection />
         <InclusiveStepsSection />
-        <ResourcePromoGrid />
       </main>
       <Footer />
     </div>
