@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lexend, Open_Sans } from "next/font/google";
+import { Lexend, Open_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const lexend = Lexend({
@@ -14,6 +14,12 @@ const openSans = Open_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
+const monsterrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "AllPlay Learn Malaysia",
   description:
@@ -26,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lexend.variable} ${openSans.variable} h-full antialiased`}>
+    <html lang="en" className={`${lexend.variable} ${openSans.variable} ${monsterrat.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );

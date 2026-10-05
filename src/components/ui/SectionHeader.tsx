@@ -6,6 +6,8 @@ interface SectionHeaderProps {
   showPill?: boolean;
   align?: "center" | "left";
   className?: string;
+  titleColor?: string;
+  subtitleColor?: string;
   children?: React.ReactNode;
 }
 
@@ -15,6 +17,8 @@ export default function SectionHeader({
   showPill = true,
   align = "center",
   className = "",
+  titleColor = "text-[#014996]",
+  subtitleColor = "text-slate-600",
   children,
 }: SectionHeaderProps) {
   const isLeft = align === "left";
@@ -30,11 +34,11 @@ export default function SectionHeader({
               <div className="w-[50px] h-[14px] rounded-full bg-intro-pill-gradient mb-[15px]" />
             </div>
           )}
-          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-semibold text-[#004899] leading-tight lg:leading-[43px] font-['Lexend',sans-serif]">
+          <h2 className={`text-2xl sm:text-3xl lg:text-[36px] font-semibold ${titleColor} leading-tight lg:leading-[43px] font-[family-name:var(--font-lexend)]`}>
             {title}
           </h2>
           {subtitle && (
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-['Verdana',sans-serif]">
+            <p className={`mt-4 text-base sm:text-lg ${subtitleColor} leading-relaxed font-['Verdana',sans-serif]`}>
               {subtitle}
             </p>
           )}
@@ -51,11 +55,11 @@ export default function SectionHeader({
           <div className="w-[50px] h-[14px] rounded-full bg-intro-pill-gradient mb-[15px] mx-auto" />
         </div>
       )}
-      <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-semibold text-[#004899] leading-tight lg:leading-[43px] font-['Lexend',sans-serif]">
+      <h2 className={`text-2xl sm:text-3xl lg:text-[36px] font-medium ${titleColor} leading-tight lg:leading-[43px] font-[family-name:var(--font-montserrat)]`}>
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-['Verdana',sans-serif] max-w-3xl mx-auto">
+        <p className={`mt-4 text-base sm:text-lg ${subtitleColor} leading-relaxed font-['Verdana',sans-serif] max-w-3xl mx-auto`}>
           {subtitle}
         </p>
       )}

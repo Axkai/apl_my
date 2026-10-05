@@ -43,9 +43,9 @@ export default function ContentSection({
       )}
 
       {/* Layer 2: Content Alignment Frame (W: 1440 Max Centered, Pt: 50, Pb: 40, Pl: 190, Pr: 190) */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto pt-[50px] pb-[40px] px-[190px] flex flex-col items-start gap-0 min-h-[1183px]">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto pt-[50px] pb-[40px] px-[190px] flex flex-col items-start gap-0">
         {/* Layer 3: Main Content Stack Container (W: 1060 Fill, Gap: 40px) */}
-        <div className="w-full max-w-[1060px] pl-[10.59px] pr-[10.61px] flex flex-col items-start gap-[40px] min-h-[1093px]">
+        <div className="w-full max-w-[1060px] pl-[10.59px] pr-[10.61px] flex flex-col items-start gap-[40px]">
           {children}
         </div>
       </div>
