@@ -13,7 +13,7 @@ export default function GuideHero() {
       title="Getting Started"
       subtitle="Information for teachers"
       jumpLinks={jumpLinks}
-      heroGraphicSrc="/page-hero-bg.png"
+      heroGraphicSrc="/hero-bg.svg"
       heroGraphicAlt="Teacher holding books with AllPlay Learn doodle wave graphic"
     />
   );

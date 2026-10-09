@@ -10,7 +10,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-xs h-[76px]">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-md h-[76px]">
       <div className="mx-auto flex max-w-[1440px] h-full items-center justify-between px-6 lg:px-[116px]">
         {/* Brand Logo Image */}
         <Link href="/" className="flex items-center group">

@@ -6,13 +6,13 @@ import SectionHeader from "./ui/SectionHeader";
 export default function HeroSection() {
   return (
     <section className="relative w-full bg-white overflow-hidden pt-12 pb-10 lg:pt-[150px] lg:pb-[40px] flex flex-col justify-between">
-      {/* Edge-to-Edge Right Wave & Children Graphic Asset */}
-      <div className="absolute top-0 right-0 w-full lg:w-[56%] h-full pointer-events-none z-0">
+      {/* 100% Independent Edge-to-Edge Background Graphic Asset Layer */}
+      <div className="absolute top-0 left-0 w-full h-[670px] pointer-events-none z-0 overflow-hidden">
         <Image
-          src="/homepage-hero-bg.png"
+          src="/homepage-hero-bg.svg"
           alt="Children enjoying inclusive education with AllPlay Learn graphic wave"
           fill
-          className="object-cover object-right-top"
+          className="object-cover object-top"
           priority
         />
       </div>

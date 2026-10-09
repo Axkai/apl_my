@@ -13,7 +13,7 @@ export default function DisabilityStrategiesPage() {
     <PageContainer>
       <PageHero
         title="Disability Strategies"
-        heroGraphicSrc="/page-hero-bg.png"
+        heroGraphicSrc="/hero-bg-2.svg"
       />
       <DisabilityTopicsSection />
     </PageContainer>

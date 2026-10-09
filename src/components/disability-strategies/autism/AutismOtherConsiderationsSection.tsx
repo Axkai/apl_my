@@ -76,35 +76,33 @@ export default function AutismOtherConsiderationsSection() {
           level="h4"
           title="Transitions"
         >
-          <div className="flex flex-col gap-4">
-            <div>
-              <BodyText className="font-bold mb-2">General tips</BodyText>
-              <BulletList>
-                <li>A child with autism may benefit from support when moving across education settings.</li>
-                <li>It may be helpful to teach and practice organisation and homework skills, and time- and self- management skills.</li>
-              </BulletList>
-            </div>
+          <div>
+            <BodyText className="font-bold mb-2">General tips</BodyText>
+            <BulletList>
+              <li>A child with autism may benefit from support when moving across education settings.</li>
+              <li>It may be helpful to teach and practice organisation and homework skills, and time- and self- management skills.</li>
+            </BulletList>
+          </div>
 
-            <div>
-              <BodyText className="font-bold mb-2">To support a student with transitioning into your school or classroom setting:</BodyText>
-              <BulletList>
-                <li>Meet with the student, family, and relevant staff before the transition. Consider also meeting, when relevant, with their health professionals.</li>
-                <li>Give the student opportunities to visit the new classroom, teacher, or school beforehand.</li>
-                <li>Maintain regular communication with families, especially during the first few weeks.</li>
-                <li>Provide supports such as visual schedules, a safe space, a key staff member, or a peer buddy.</li>
-                <li>Ask families about the student's strengths, interests, and strategies that work well. Ask parents to complete AllPlay Learn's Strengths and Abilities Communication Checklist.</li>
-                <li>Check in regularly to see how the student is settling in socially, emotionally, and academically.</li>
-              </BulletList>
-            </div>
+          <div>
+            <BodyText className="font-bold mb-2">To support a student with transitioning into your school or classroom setting:</BodyText>
+            <BulletList>
+              <li>Meet with the student, family, and relevant staff before the transition. Consider also meeting, when relevant, with their health professionals.</li>
+              <li>Give the student opportunities to visit the new classroom, teacher, or school beforehand.</li>
+              <li>Maintain regular communication with families, especially during the first few weeks.</li>
+              <li>Provide supports such as visual schedules, a safe space, a key staff member, or a peer buddy.</li>
+              <li>Ask families about the student's strengths, interests, and strategies that work well. Ask parents to complete AllPlay Learn's Strengths and Abilities Communication Checklist.</li>
+              <li>Check in regularly to see how the student is settling in socially, emotionally, and academically.</li>
+            </BulletList>
+          </div>
 
-            <div>
-              <BodyText className="font-bold mb-2">To support a student with transitioning out of your school or classroom setting:</BodyText>
-              <BulletList>
-                <li>Work with the student, family, and new education setting to plan the transition. This can be done through, for example, a transition planning meeting.</li>
-                <li>Help the student practise coping and self-regulation strategies.</li>
-                <li>With parent consent, share information about the student's strengths, interests, and successful supports with the new setting. Use AllPlay Learn's Strengths and Abilities Communication Checklist.</li>
-              </BulletList>
-            </div>
+          <div>
+            <BodyText className="font-bold mb-2">To support a student with transitioning out of your school or classroom setting:</BodyText>
+            <BulletList>
+              <li>Work with the student, family, and new education setting to plan the transition. This can be done through, for example, a transition planning meeting.</li>
+              <li>Help the student practise coping and self-regulation strategies.</li>
+              <li>With parent consent, share information about the student's strengths, interests, and successful supports with the new setting. Use AllPlay Learn's Strengths and Abilities Communication Checklist.</li>
+            </BulletList>
           </div>
         </SubSection>
       </SubSectionGroup>

@@ -13,7 +13,7 @@ export default function InclusionDiagramSection() {
         title="What is inclusive education?"
         showPill={true}
         align="left"
-        className="px-0"
+        
       >
         <BodyText>
           Inclusive education means all students, including students with

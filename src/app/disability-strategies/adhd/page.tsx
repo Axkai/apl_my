@@ -29,7 +29,7 @@ export default function AdhdStrategyPage() {
     <PageContainer>
       <PageHero
         title="Attention-deficit/hyperactivity disorder (ADHD)"
-        heroGraphicSrc="/page-hero-bg.png"
+        heroGraphicSrc="/hero-bg.svg"
         jumpLinks={jumpLinks}
       />
       <AdhdAboutSection />

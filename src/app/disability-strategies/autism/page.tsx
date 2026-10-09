@@ -29,7 +29,7 @@ export default function AutismStrategyPage() {
     <PageContainer>
       <PageHero
         title="Autism"
-        heroGraphicSrc="/page-hero-bg.png"
+        heroGraphicSrc="/hero-bg.svg"
         jumpLinks={jumpLinks}
       />
       <AutismAboutSection />

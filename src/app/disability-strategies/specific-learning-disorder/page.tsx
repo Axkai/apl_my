@@ -29,7 +29,7 @@ export default function SpecificLearningDisorderStrategyPage() {
     <PageContainer>
       <PageHero
         title="Specific Learning Disorder"
-        heroGraphicSrc="/page-hero-bg.png"
+        heroGraphicSrc="/hero-bg.svg"
         jumpLinks={jumpLinks}
       />
       <SpecificLearningDisorderAboutSection />

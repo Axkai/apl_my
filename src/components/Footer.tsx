@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#4930A7] text-white font-sans flex flex-col items-center gap-[70px]">
+    <footer className="w-full bg-[#4531A1] text-white font-sans flex flex-col items-center gap-[70px]">
       {/* Top Motto / Quote Graphic (Figma spec: 1060 Fill x 111.72 Hug, X:190, Pt:11, Pb:30) */}
       <div className="w-full h-[112px] bg-[#412B96] flex items-center justify-center">
         <div className="w-full max-w-[1060px] h-full mx-auto pt-[11px] pb-[30px] flex items-center justify-center">

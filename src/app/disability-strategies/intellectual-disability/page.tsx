@@ -29,7 +29,7 @@ export default function IntellectualDisabilityStrategyPage() {
     <PageContainer>
       <PageHero
         title="Intellectual Disability"
-        heroGraphicSrc="/page-hero-bg.png"
+        heroGraphicSrc="/hero-bg.svg"
         jumpLinks={jumpLinks}
       />
       <IntellectualDisabilityAboutSection />

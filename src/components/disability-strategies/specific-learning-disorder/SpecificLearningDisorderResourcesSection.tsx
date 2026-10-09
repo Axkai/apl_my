@@ -2,7 +2,6 @@ import React from "react";
 import ContentSection from "@/components/ui/ContentSection";
 import SectionHeader from "@/components/ui/SectionHeader";
 import BodyText from "@/components/ui/BodyText";
-import Button from "@/components/ui/Button";
 import ResourceContainer from "@/components/ui/ResourceContainer";
 import ResourceItem from "@/components/ui/ResourceItem";
 
@@ -43,14 +42,20 @@ export default function SpecificLearningDisorderResourcesSection() {
       </ResourceContainer>
 
       <div className="pt-4">
-        <Button
+        <a
           href="https://allplaylearn.org.au/primary/teacher/sld/"
-          variant="primary-navy"
           target="_blank"
           rel="noopener noreferrer"
+          className="inline-block transition-transform hover:scale-105 focus:outline-hidden"
+          aria-label="Download this page as a PDF"
         >
-          Download this page as a PDF
-        </Button>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/download-page-pdf.svg"
+            alt="Download this page as a PDF"
+            className="h-auto w-auto max-w-[260px]"
+          />
+        </a>
       </div>
     </ContentSection>
   );

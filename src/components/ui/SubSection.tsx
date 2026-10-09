@@ -1,15 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
+import ImageCard from "@/components/ui/ImageCard";
 
 export interface SubSectionGroupProps {
   /**
    * Layout mode:
    * - "stack" (default): Original single-column vertical stack (max-w-[1038.8px])
    * - "grid-2": 2xN grid layout (each cell max-w-[530px] fill, dynamic hug height)
+   * - "grid-3": 3-column grid layout (1 col mobile -> 2 cols tablet -> 3 cols desktop)
    * - "tabbed-vertical": Side-by-side vertical tabs menu on left, active content panel on right
    */
-  layout?: "stack" | "grid-2" | "tabbed-vertical";
+  layout?: "stack" | "grid-2" | "grid-3" | "tabbed-vertical";
   className?: string;
   children: React.ReactNode;
 }
@@ -127,13 +129,15 @@ export function SubSectionGroup({
   }
 
   const layoutClasses =
-    layout === "grid-2"
+    layout === "grid-3"
+      ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] lg:gap-x-[40px] gap-y-[40px] max-w-[1060px]"
+      : layout === "grid-2"
       ? "grid grid-cols-1 md:grid-cols-2 gap-x-[40px] lg:gap-x-[50px] gap-y-[50px] max-w-[1060px]"
       : "flex flex-col items-start gap-[50px] max-w-[1038.8px]";
 
   return (
     <div
-      className={`w-full pt-[25px] pb-[15px] ${layoutClasses} ${className}`}
+      className={`w-full pt-[0px] pb-[15px] ${layoutClasses} ${className}`}
     >
       {children}
     </div>
@@ -142,10 +146,20 @@ export function SubSectionGroup({
 
 export interface SubSectionProps {
   id?: string;
-  title: string;
+  title?: string;
   /** Heading level: "h3" (28/32, default) or "h4" (18/25 per Figma spec) */
   level?: "h3" | "h4";
   titleColor?: string;
+  /** Optional top visual graphic URL (e.g. "/principle-1.png") */
+  visualSrc?: string;
+  /** Alt text for top visual graphic */
+  visualAlt?: string;
+  /** Optional explicit width override for top visual graphic in pixels (Defaults to 200) */
+  visualImageWidth?: number;
+  /** Optional explicit height override for top visual graphic in pixels (Defaults to 150) */
+  visualImageHeight?: number;
+  /** Optional React node slot for custom top visual graphic */
+  visual?: React.ReactNode;
   className?: string;
   children: React.ReactNode;
 }
@@ -155,6 +169,11 @@ export function SubSection({
   title,
   level = "h3",
   titleColor = "text-[#004899]",
+  visualSrc,
+  visualAlt = "",
+  visualImageWidth = 200,
+  visualImageHeight = 150,
+  visual,
   className = "",
   children,
 }: SubSectionProps) {
@@ -164,19 +183,50 @@ export function SubSection({
       ? `text-[18px] leading-[25px] font-semibold ${titleColor}`
       : `text-[24px] lg:text-[28px] leading-[32px] font-semibold ${titleColor}`;
 
+  const hasVisual = Boolean(visual || visualSrc);
+  const rowSpanClass =
+    hasVisual && title
+      ? "md:row-span-3"
+      : title || hasVisual
+      ? "md:row-span-2"
+      : "md:row-span-1";
+
   return (
     <div
       id={id}
-      className={`w-full h-auto flex flex-col md:grid md:grid-rows-subgrid md:row-span-2 items-start justify-start gap-[16px] ${
+      className={`w-full h-auto flex flex-col ${
+        title || hasVisual ? `md:grid md:grid-rows-subgrid ${rowSpanClass}` : ""
+      } items-start justify-start gap-[16px] ${
         id ? "scroll-mt-20" : ""
       } ${className}`}
     >
-      {/* Subsection Heading Text Node */}
-      <div className="w-full flex items-center justify-start p-0 gap-0">
-        <HeadingTag className={`${titleStyles} font-['Lexend',sans-serif]`}>
-          {title}
-        </HeadingTag>
-      </div>
+      {/* 1. Top Visual Asset Node */}
+      {hasVisual && (
+        <div className="w-full flex items-center justify-start mb-[4px]">
+          {visual ? (
+            visual
+          ) : (
+            <ImageCard
+              src={visualSrc!}
+              alt={visualAlt}
+              align="left"
+              imageWidth={visualImageWidth}
+              imageHeight={visualImageHeight}
+            />
+          )}
+        </div>
+      )}
+
+      {/* 2. Subsection Heading Text Node */}
+      {title && (
+        <div className="w-full flex items-center justify-start p-0 gap-0">
+          <HeadingTag className={`${titleStyles} font-['Lexend',sans-serif]`}>
+            {title}
+          </HeadingTag>
+        </div>
+      )}
+
+      {/* 3. Body Content Node */}
       <div className="w-full flex flex-col items-start gap-[16px]">
         {children}
       </div>
