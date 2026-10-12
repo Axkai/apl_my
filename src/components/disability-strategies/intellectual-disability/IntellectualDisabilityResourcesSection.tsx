@@ -4,49 +4,56 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import BodyText from "@/components/ui/BodyText";
 import ResourceContainer from "@/components/ui/ResourceContainer";
 import ResourceItem from "@/components/ui/ResourceItem";
+import { getAssetUrl } from "@/lib/storage";
 
 const intellectualDisabilityResources = [
   {
     id: "communication-checklist",
     title: "Communication checklist (PDF)",
     pdfUrl: "https://allplaylearn.org.au/wp-content/uploads/2019/06/Strengths-and-Abilities-Communication-Checklist-Primary.pdf",
-    previewImageUrl: "/images/resources/communication-checklist-preview.png",
+    previewImageUrl: getAssetUrl("previews/communication-checklist-preview.png"),
   },
   {
     id: "class-schedule",
     title: "Class schedule (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1wBsobfjgNdEji0A_dyFMSi5ONTA3LI5D/view?usp=sharing",
-    previewImageUrl: "/images/resources/class-schedule-preview.png",
+    previewImageUrl: getAssetUrl("previews/class-schedule-preview.png"),
   },
   {
     id: "self-monitoring",
     title: "Student self-monitoring form (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1Vd0RHTBwpDCjGjjgNTm0tAxlsBNU0H4z/view?usp=sharing",
-    previewImageUrl: "/images/resources/self-monitoring-preview.png",
+    previewImageUrl: getAssetUrl("previews/self-monitoring-preview.png"),
   },
   {
-    id: "stay-play-talk",
-    title: "Stay play talk poster (PDF)",
-    pdfUrl: "https://allplaylearn.org.au/wp-content/uploads/2019/06/Stay-Play-Talk-Poster-Early-Primary.pdf",
-    previewImageUrl: "/images/resources/stay-play-talk-preview.png",
+    id: "stay-play-talk-peer-mediation-poster",
+    title: "Stay Play Talk Peer mediation poster (for early primary) (PDF)",
+    pdfUrl: "https://drive.google.com/file/d/1XtdNtaddL5Nk-J3j7BcR_ZGTDlIMxvz6/view?usp=share_link",
+    previewImageUrl: getAssetUrl("previews/stay-play-talk-peer-mediation-poster-preview.png"),
   },
   {
-    id: "peer-mediation",
-    title: "Peer mediation steps poster (PDF)",
+    id: "stay-play-talk-peer-mediation-poster-simple",
+    title: "Stay Play Talk Peer mediation poster (for early primary) (simple version/sensory sensitive version) (PDF)",
+    pdfUrl: "https://drive.google.com/file/d/1XtdNtaddL5Nk-J3j7BcR_ZGTDlIMxvz6/view?usp=share_link",
+    previewImageUrl: getAssetUrl("previews/stay-play-talk-peer-mediation-poster-simple-preview.png"),
+  },
+  {
+    id: "peer-mediation-steps",
+    title: "Peer mediation steps poster (for primary school students) (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1a4suAHqw8aY1t1AA11VYt7XNPUgrRCI_/view?usp=sharing",
-    previewImageUrl: "/images/resources/peer-mediation-preview.png",
+    previewImageUrl: getAssetUrl("previews/peer-mediation-steps-preview.png"),
   },
   {
     id: "emotion-cards",
     title: "Emotion cards (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1gLSBUd5qyqHWmbY7EUjSLgy5Pv42_njr/view?usp=sharing",
-    previewImageUrl: "/images/resources/emotion-card.png",
+    previewImageUrl: getAssetUrl("previews/emotion-card.png"),
   },
   {
     id: "peer-info-id",
     title: "Peer information sheet - Intellectual Disability (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1Sm3Y6heeP7dSp9fzTugX5g-_lQ8qhvEr/view?usp=share_link",
-    previewImageUrl: "/images/resources/peer-info-id-preview.png",
+    previewImageUrl: getAssetUrl("previews/peer-info-id-preview.png"),
   },
 ];
 

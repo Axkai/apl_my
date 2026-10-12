@@ -4,6 +4,7 @@ import ResourceContainer from "@/components/ui/ResourceContainer";
 import ResourceItem from "@/components/ui/ResourceItem";
 import Button from "@/components/ui/Button";
 import { SubSectionGroup, SubSection } from "@/components/ui/SubSection";
+import { getAssetUrl } from "@/lib/storage";
 
 const storiesList = [
   {
@@ -13,7 +14,7 @@ const storiesList = [
     mainPdfUrl: "https://drive.google.com/file/d/1X5HeKsy28NGOb9kkg9RZXWQSXJadA63p/view?usp=share_link",
     audioUrl: "https://drive.google.com/file/d/1X63AQdOYZVIc3cEXtrYAwolrcWH0QfSI/view?usp=share_link",
     customImagesUrl: "https://drive.google.com/file/d/1cEovEFGYrUlPKbrcO6NvjdR9UcIL0Sbg/view?usp=share_link",
-    previewImageUrl: "/images/resources/story-playtime-preview.png",
+    previewImageUrl: getAssetUrl("previews/story-playtime-preview.png"),
   },
   {
     id: "being-different",
@@ -22,7 +23,7 @@ const storiesList = [
     mainPdfUrl: "https://drive.google.com/file/d/1jXxG3knu5_KHhcihBSa7rea3Aan62b5G/view?usp=share_link",
     audioUrl: "https://drive.google.com/file/d/1XtdNtaddL5Nk-J3j7BcR_ZGTDlIMxvz6/view?usp=share_link",
     customImagesUrl: "https://drive.google.com/file/d/1XyXOyzgy-GCNfnPpd6_SX7pi3D0do6ib/view?usp=share_link",
-    previewImageUrl: "/images/resources/story-being-different-preview.png",
+    previewImageUrl: getAssetUrl("previews/story-being-different-preview.png"),
   },
 ];
 

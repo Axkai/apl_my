@@ -4,31 +4,38 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import BodyText from "@/components/ui/BodyText";
 import ResourceContainer from "@/components/ui/ResourceContainer";
 import ResourceItem from "@/components/ui/ResourceItem";
+import { getAssetUrl } from "@/lib/storage";
 
 const adhdResources = [
   {
     id: "class-schedule",
     title: "Class schedule (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1wBsobfjgNdEji0A_dyFMSi5ONTA3LI5D/view?usp=sharing",
-    previewImageUrl: "/images/resources/class-schedule-preview.png",
+    previewImageUrl: getAssetUrl("previews/class-schedule-preview.png"),
   },
   {
     id: "self-monitoring",
     title: "Student self-monitoring form (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1Vd0RHTBwpDCjGjjgNTm0tAxlsBNU0H4z/view?usp=sharing",
-    previewImageUrl: "/images/resources/self-monitoring-preview.png",
+    previewImageUrl: getAssetUrl("previews/self-monitoring-preview.png"),
   },
+  {
+    id: "communication-checklist",
+    title: "Communication checklist (PDF)",
+    pdfUrl: "https://drive.google.com/file/d/1Vd0RHTBwpDCjGjjgNTm0tAxlsBNU0H4z/view?usp=sharing",
+    previewImageUrl: getAssetUrl("previews/communication-checklist-preview.png"),
+  }, 
   {
     id: "problem-solving",
     title: "Problem solving guide (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1o7hg3fJWbUrao64_WhdOiQx74JYg73cl/view?usp=sharing",
-    previewImageUrl: "/images/resources/problem-solving-preview.png",
+    previewImageUrl: getAssetUrl("previews/problem-solving-preview.png"),
   },
   {
-    id: "peer-info-activity",
+    id: "peer-info-activity-adhd",
     title: "Peer information activity book - ADHD (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1Rz5Hbxm1cVZz_YLg4i6WgQ28iRe7kuag/view?usp=sharing",
-    previewImageUrl: "/images/resources/peer-activity-preview.png",
+    previewImageUrl: getAssetUrl("previews/peer-activity-adhd-preview.png"),
   },
 ];
 

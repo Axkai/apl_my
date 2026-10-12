@@ -4,25 +4,26 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import BodyText from "@/components/ui/BodyText";
 import ResourceContainer from "@/components/ui/ResourceContainer";
 import ResourceItem from "@/components/ui/ResourceItem";
+import { getAssetUrl } from "@/lib/storage";
 
 const classroomResources = [
   {
     id: "strengths-communication-checklist",
     title: "Strengths and Abilities Communication Checklist (Primary) (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1Y89gRFrakEBD7hcU_0PxDEJubWhLWIpK/view?usp=sharing",
-    previewImageUrl: "/images/resources/communication-checklist-preview.png",
+    previewImageUrl: getAssetUrl("previews/communication-checklist-preview.png"),
   },
   {
     id: "teacher-schedule",
     title: "Primary / Secondary Teacher Schedule (PDF)",
-    pdfUrl: "/pdfs/Classroom%20Resources%20-%20Class%20Schedule.pdf",
-    previewImageUrl: "/images/resources/class_schedule.png",
+    pdfUrl: getAssetUrl("pdfs/class-schedule.pdf"),
+    previewImageUrl: getAssetUrl("previews/class_schedule.png"),
   },
   {
     id: "self-monitoring-form",
     title: "Primary / Secondary Self-Monitoring Form (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1Vd0RHTBwpDCjGjjgNTm0tAxlsBNU0H4z/view?usp=sharing",
-    previewImageUrl: "/images/resources/self-monitoring-preview.png",
+    previewImageUrl: getAssetUrl("previews/self-monitoring-preview.png"),
   },
 ];
 

@@ -5,19 +5,20 @@ import BodyText from "@/components/ui/BodyText";
 import BulletList from "@/components/ui/BulletList";
 import ResourceContainer from "@/components/ui/ResourceContainer";
 import ResourceItem from "@/components/ui/ResourceItem";
+import { getAssetUrl } from "@/lib/storage";
 
 const anxietyResources = [
   {
     id: "anxiety-teacher-form",
     title: "Teacher form (PDF)",
     pdfUrl: "https://www.allplaylearn.org.au/content/uploads/2021/03/Anxiety-tool-AllPlay-Primary-school-teachers.pdf",
-    previewImageUrl: "/images/resources/anxiety-teacher-preview.png",
+    previewImageUrl: getAssetUrl("previews/anxiety-teacher-preview.png"),
   },
   {
     id: "anxiety-student-form",
     title: "Student form (PDF)",
     pdfUrl: "https://allplaylearn.org.au/wp-content/uploads/2021/03/Anxiety-tool-AllPlay-Taking-control-of-my-worries.pdf",
-    previewImageUrl: "/images/resources/anxiety-student-preview.png",
+    previewImageUrl: getAssetUrl("previews/anxiety-student-preview.png"),
   },
 ];
 

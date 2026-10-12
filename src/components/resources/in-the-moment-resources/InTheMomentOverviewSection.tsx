@@ -4,31 +4,32 @@ import BodyText from "@/components/ui/BodyText";
 import ResourceContainer from "@/components/ui/ResourceContainer";
 import ResourceItem from "@/components/ui/ResourceItem";
 import { SubSectionGroup, SubSection } from "@/components/ui/SubSection";
+import { getAssetUrl } from "@/lib/storage";
 
 const inTheMomentResources = [
   {
-    id: "asking-for-help",
-    title: "Asking for help (PDF)",
+    id: "character-strengths-poster",
+    title: "Character strengths poster (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1X5HeKsy28NGOb9kkg9RZXWQSXJadA63p/view?usp=share_link",
-    previewImageUrl: "/images/resources/communication-checklist-preview.png",
-  },
+    previewImageUrl: getAssetUrl("previews/character-strengths-poster-preview.png"),
+  },  
   {
     id: "problem-solving-guide",
     title: "Problem-solving guide (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1X63AQdOYZVIc3cEXtrYAwolrcWH0QfSI/view?usp=share_link",
-    previewImageUrl: "/images/resources/problem-solving-preview.png",
+    previewImageUrl: getAssetUrl("previews/problem-solving-preview.png"),
   },
   {
     id: "relaxation-breathing-script",
     title: "Relaxation box breathing script (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1cEovEFGYrUlPKbrcO6NvjdR9UcIL0Sbg/view?usp=share_link",
-    previewImageUrl: "/images/resources/peer-info-id-preview.png",
+    previewImageUrl: getAssetUrl("previews/relaxation-breathing-script-preview.png"),
   },
   {
     id: "emotion-cards",
     title: "Emotion cards (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1XACIdqBw-S9TML0B893MpYxwyJIIpbvy/view?usp=share_link",
-    previewImageUrl: "/images/resources/emotion-card.png",
+    previewImageUrl: getAssetUrl("previews/emotion-card.png"),
   },
 ];
 

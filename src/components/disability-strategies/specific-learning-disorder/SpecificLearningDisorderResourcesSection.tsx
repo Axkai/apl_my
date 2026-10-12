@@ -4,19 +4,20 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import BodyText from "@/components/ui/BodyText";
 import ResourceContainer from "@/components/ui/ResourceContainer";
 import ResourceItem from "@/components/ui/ResourceItem";
+import { getAssetUrl } from "@/lib/storage";
 
 const specificLearningDisorderResources = [
   {
     id: "communication-checklist",
     title: "Communication checklist (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1Y89gRFrakEBD7hcU_0PxDEJubWhLWIpK/view?usp=sharing",
-    previewImageUrl: "/images/resources/communication-checklist-preview.png",
+    previewImageUrl: getAssetUrl("previews/communication-checklist-preview.png"),
   },
   {
     id: "self-monitoring",
     title: "Student self-monitoring form (PDF)",
     pdfUrl: "https://drive.google.com/file/d/1Vd0RHTBwpDCjGjjgNTm0tAxlsBNU0H4z/view?usp=sharing",
-    previewImageUrl: "/images/resources/self-monitoring-preview.png",
+    previewImageUrl: getAssetUrl("previews/self-monitoring-preview.png"),
   },
 ];
 
