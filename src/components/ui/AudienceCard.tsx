@@ -61,7 +61,7 @@ export default function AudienceCard({
         <div className="relative z-10 flex flex-col items-center text-center w-[267px] mx-auto gap-[40px]">
           {/* Layer 4: Title Heading Container (W: 267 Fill, H: 32 Hug, Alignment: Center) */}
           <div className="w-full h-[32px] flex items-center justify-center text-center">
-            <h3 className="text-2xl sm:text-[28px] leading-[32px] font-medium text-white font-['Lexend',sans-serif]">
+            <h3 className="font-[family-name:var(--font-montserrat)] text-2xl sm:text-[28px] font-normal leading-[32px] tracking-normal text-center text-white">
               {title}
             </h3>
           </div>

@@ -22,7 +22,7 @@ export default function HeroSection() {
         <div className="max-w-[1060px] mx-auto">
           <div className="max-w-[686px] space-y-[31px]">
             {/* H1 Title */}
-            <h1 className="text-5xl sm:text-6xl lg:text-[72px] font-bold text-[#004899] leading-tight lg:leading-[85px] tracking-tight font-['Lexend',sans-serif]">
+            <h1 className="w-full text-5xl sm:text-6xl lg:text-[72px] font-semibold text-[#004899] leading-tight lg:leading-[85px] tracking-normal font-[family-name:var(--font-montserrat)] text-left">
               AllPlay Learn <br />
               Malaysia
             </h1>

@@ -36,7 +36,7 @@ export default function SectionHeader({
               </div>
             )}
             {title && (
-              <h2 className={`text-2xl sm:text-3xl lg:text-[36px] font-semibold ${titleColor} leading-tight lg:leading-[43px] font-[family-name:var(--font-lexend)]`}>
+              <h2 className={`text-2xl sm:text-3xl lg:text-[36px] font-medium ${titleColor} leading-tight lg:leading-[43px] tracking-normal text-left font-[family-name:var(--font-montserrat)]`}>
                 {title}
               </h2>
             )}

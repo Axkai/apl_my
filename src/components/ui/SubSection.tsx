@@ -83,8 +83,8 @@ export function SubSectionGroup({
             const level = sub.props.level || "h4";
             const titleStyles =
               level === "h4"
-                ? "text-[18px] leading-[25px]"
-                : "text-[24px] lg:text-[28px] leading-[32px]";
+                ? "font-[family-name:var(--font-montserrat)] text-[16px] leading-[25px]"
+                : "font-['Lexend',sans-serif] text-[24px] lg:text-[28px] leading-[32px]";
 
             return (
               <button
@@ -100,7 +100,7 @@ export function SubSectionGroup({
                     : `font-semibold text-[#004899] opacity-80 hover:opacity-100 hover:bg-slate-50/50`
                 }`}
               >
-                <span className={`block w-full text-right ${titleStyles} font-['Lexend',sans-serif] tracking-normal`}>
+                <span className={`block w-full text-right ${titleStyles} ${isActive ? "font-bold" : "font-semibold"} tracking-normal`}>
                   {sub.props.title}
                 </span>
 
@@ -181,7 +181,7 @@ export function SubSection({
   const titleStyles =
     level === "h4"
       ? `text-[18px] leading-[25px] font-semibold ${titleColor}`
-      : `text-[24px] lg:text-[28px] leading-[32px] font-semibold ${titleColor}`;
+      : `text-[22px] font-medium leading-[29px] tracking-normal text-left ${titleColor}`;
 
   const hasVisual = Boolean(visual || visualSrc);
   const rowSpanClass =
@@ -220,7 +220,7 @@ export function SubSection({
       {/* 2. Subsection Heading Text Node */}
       {title && (
         <div className="w-full flex items-center justify-start p-0 gap-0">
-          <HeadingTag className={`${titleStyles} font-['Lexend',sans-serif]`}>
+          <HeadingTag className={`${titleStyles} font-[family-name:var(--font-montserrat)]`}>
             {title}
           </HeadingTag>
         </div>

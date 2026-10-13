@@ -25,6 +25,8 @@ export interface PageHeroProps {
   heroGraphicAlt?: string;
   /** Hero background canvas height in pixels (Defaults to 578) */
   heroHeight?: number;
+  /** Controls header width: "full" (1060px) or "narrow" (lg:660px) to prevent overlapping right-side visuals (Defaults to "full") */
+  titleWidth?: "full" | "narrow";
   /** Additional container wrapper class overrides */
   className?: string;
   /** Supplementary React nodes / slots */
@@ -40,10 +42,13 @@ export default function PageHero({
   heroGraphicSrc = "/hero-bg.svg",
   heroGraphicAlt = "AllPlay Learn Header Graphic",
   heroHeight = 578,
+  titleWidth = "full",
   className = "",
   children,
 }: PageHeroProps) {
   const heightPx = `${heroHeight}px`;
+  const titleWidthClass =
+    titleWidth === "narrow" ? "max-w-[1060px] lg:max-w-[660px]" : "max-w-[1060px]";
 
   return (
     /* Layer 1: Full-Bleed PageHero Outer Section Container (Spans 100% viewport width) */
@@ -72,7 +77,7 @@ export default function PageHero({
         {/* Layer 3: PageHero Content Container Stack (Position X: 190, Y: 250, W: 1060 Fill, H: 303 Hug, Gap: 20px) */}
         <div className="w-full max-w-[1060px] pl-[10.59px] pr-[10.61px] flex flex-col gap-[20px] items-start">
           {/* Layer 4: Title & Subtitle Stack Container (Position X: 0, Y: 0, W: 1060 Fill, H: 128 Hug, Gap: 0) */}
-          <div className="w-full max-w-[1060px] flex flex-col gap-0 items-start">
+          <div className={`w-full ${titleWidthClass} flex flex-col gap-0 items-start`}>
             {/* Layer 5: Heading 1 Text */}
             <h1 className="text-5xl sm:text-6xl lg:text-[72px] font-semibold text-[#014996] tracking-normal leading-tight lg:leading-[85px] font-[family-name:var(--font-montserrat)]">
               {title}
@@ -80,7 +85,7 @@ export default function PageHero({
 
             {/* Layer 6: Subtitle Container */}
             {subtitle && (
-              <div className="w-full max-w-[1060px] h-[43px] flex items-center">
+              <div className="w-full h-[43px] flex items-center">
                 <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-semibold text-[#004899] leading-tight lg:leading-[43px] font-['Lexend',sans-serif]">
                   {subtitle}
                 </h2>

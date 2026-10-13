@@ -18,6 +18,7 @@ export default function AboutPage() {
     <PageContainer>
       <PageHero
         title="Welcome to AllPlay Learn"
+        titleWidth = "narrow"
         heroGraphicSrc="/homepage-hero-bg.svg"
         
       />
